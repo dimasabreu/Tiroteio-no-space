@@ -1,6 +1,8 @@
 # Unity_SpaceShooter
 
 - [X] criar o arquivo
+- [ ] adicionar o player
+    - [ ] colocar as sprites 
 - [ ] criar o sistema de movimentacao 
 - [ ] criar o sistema de tiro
 - [ ] criar o sistema de vida
