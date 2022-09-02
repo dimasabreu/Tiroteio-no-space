@@ -1,6 +1,6 @@
 # Unity_SpaceShooter
 
-- [ ] criar o arquivo
+- [X] criar o arquivo
 - [ ] criar o sistema de movimentacao 
 - [ ] criar o sistema de tiro
 - [ ] criar o sistema de vida
