@@ -3,6 +3,7 @@
 - [X] criar o arquivo
 - [ ] adicionar o player
     - [ ] colocar as sprites 
+    - [ ] criar a animacao do player
 - [ ] criar o sistema de movimentacao 
 - [ ] criar o sistema de tiro
 - [ ] criar o sistema de vida
