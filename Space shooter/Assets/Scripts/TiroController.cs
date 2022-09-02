@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class TiroController : MonoBehaviour
 {
+    private Rigidbody2D meuRB;
+    [SerializeField] private float vel = 10f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        // rigidbody
+        meuRB = GetComponent<Rigidbody2D>();
+        // indo para cima
+        meuRB.velocity = new Vector2(0f, vel);
     }
 
     // Update is called once per frame
