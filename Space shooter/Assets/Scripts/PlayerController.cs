@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
-{   // teste
-    float vel = 0.1f;
+{   
+    private Rigidbody2D meuRB;
+    [SerializeField] float velocidade = 5f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        meuRB = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        var horizontal = Input.GetAxis("Horizontal") * vel;
-        Debug.Log(horizontal);
+        // pegando o input horizontal
+        float horizontal = Input.GetAxis("Horizontal");
+        // pegando o input vertical
+        float vertical = Input.GetAxis("Vertical");
+        Vector2 minhaVelocidade = new Vector2(horizontal, vertical) * velocidade;
+        // passando a velocidade para o rb
+        meuRB.velocity = minhaVelocidade;
     }
 }
