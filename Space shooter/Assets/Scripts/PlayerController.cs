@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {   
     private Rigidbody2D meuRB;
-    [SerializeField] float velocidade = 5f;
+    [SerializeField] private float velocidade = 5f;
+    [SerializeField] private GameObject meuTiro;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +30,7 @@ public class PlayerController : MonoBehaviour
         // testando o tiro
         if (Input.GetButtonDown("Fire1"))
         {
-            Debug.Log("Piu");
+            Instantiate(meuTiro, transform.position, transform.rotation);
         }    
     }
 }
