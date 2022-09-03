@@ -24,5 +24,11 @@ public class PlayerController : MonoBehaviour
         minhaVelocidade = minhaVelocidade.normalized;
         // passando a velocidade para o rb
         meuRB.velocity = minhaVelocidade * velocidade;
+
+        // testando o tiro
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Debug.Log("Piu");
+        }    
     }
 }
