@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 400174339}
   - component: {fileID: 6017926351645576304}
   - component: {fileID: 2978925365784016775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tiro.player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 2012179613657762096}
   - component: {fileID: 706134231733089200}
   - component: {fileID: 5519664510155535666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tiro_player
   m_TagString: Untagged
   m_Icon: {fileID: 0}

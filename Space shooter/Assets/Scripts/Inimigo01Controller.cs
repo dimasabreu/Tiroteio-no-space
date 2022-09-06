@@ -6,6 +6,8 @@ public class Inimigo01Controller : MonoBehaviour
 {   // pegando o rb
     private Rigidbody2D meuRB;
     [SerializeField] private float velocidade = -3f;
+    // meu tiro
+    [SerializeField] private GameObject meuTiro;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,7 @@ public class Inimigo01Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Instanciando o tiro
+        Instantiate(meuTiro, transform.position, transform.rotation);
     }
 }
