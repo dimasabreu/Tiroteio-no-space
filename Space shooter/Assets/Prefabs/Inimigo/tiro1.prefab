@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2991548480326138463}
   - component: {fileID: 2991548480326138462}
   - component: {fileID: 2991548480326138449}
+  - component: {fileID: 2636091652979689136}
   m_Layer: 0
   m_Name: tiro1
   m_TagString: Untagged
@@ -120,3 +121,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vel: -6
+--- !u!58 &2636091652979689136
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2991548480326138448}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.135
