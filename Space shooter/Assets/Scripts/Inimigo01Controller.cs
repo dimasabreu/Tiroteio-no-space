@@ -17,6 +17,8 @@ public class Inimigo01Controller : MonoBehaviour
         meuRB = GetComponent<Rigidbody2D>();
         // colocando a velocidade no rb
         meuRB.velocity = new Vector2(0f, velocidade);
+        // deixando espera do tiro aleatoria
+        esperaTiro = Random.Range(0.5f, 2f);
     }
 
     // Update is called once per frame
@@ -29,7 +31,7 @@ public class Inimigo01Controller : MonoBehaviour
             // Instanciando o tiro
             Instantiate(meuTiro, transform.position, transform.rotation);
             // reiniciando o tiro
-            esperaTiro = 1f;
+            esperaTiro = Random.Range(1.5f, 2f);
         }
         
     }
