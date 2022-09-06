@@ -8,6 +8,8 @@ public class Inimigo01Controller : MonoBehaviour
     [SerializeField] private float velocidade = -3f;
     // meu tiro
     [SerializeField] private GameObject meuTiro;
+    // delay do tiro
+    private float esperaTiro = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,15 @@ public class Inimigo01Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Instanciando o tiro
-        Instantiate(meuTiro, transform.position, transform.rotation);
+        // diminuir a espera
+        esperaTiro -= Time.deltaTime;
+        if (esperaTiro <= 0)
+        {
+            // Instanciando o tiro
+            Instantiate(meuTiro, transform.position, transform.rotation);
+            // reiniciando o tiro
+            esperaTiro = 1f;
+        }
+        
     }
 }

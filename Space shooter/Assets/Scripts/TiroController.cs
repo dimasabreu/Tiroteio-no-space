@@ -6,6 +6,7 @@ public class TiroController : MonoBehaviour
 {
     private Rigidbody2D meuRB;
     [SerializeField] private float vel = 10f;
+
     // Start is called before the first frame update
     void Start()
     {
