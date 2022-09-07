@@ -358,10 +358,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 859242369, guid: 4df60fdaaf6d9904d8dac00bb1eb3769, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.629
-      objectReference: {fileID: 0}
     - target: {fileID: 7885956151607079392, guid: 4df60fdaaf6d9904d8dac00bb1eb3769, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -409,14 +405,6 @@ PrefabInstance:
     - target: {fileID: 7885956151607079395, guid: 4df60fdaaf6d9904d8dac00bb1eb3769, type: 3}
       propertyPath: m_Name
       value: Inimigo_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7885956151673707640, guid: 4df60fdaaf6d9904d8dac00bb1eb3769, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7885956151673707640, guid: 4df60fdaaf6d9904d8dac00bb1eb3769, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1661865603
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df60fdaaf6d9904d8dac00bb1eb3769, type: 3}
