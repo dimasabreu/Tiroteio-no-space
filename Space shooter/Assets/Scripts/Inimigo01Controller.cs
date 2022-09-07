@@ -24,15 +24,19 @@ public class Inimigo01Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Checar se a sprite esta visivel pegando info do child
+        bool visivel = GetComponentInChildren<SpriteRenderer>().isVisible;
         // diminuir a espera
-        esperaTiro -= Time.deltaTime;
-        if (esperaTiro <= 0)
+        if (visivel)
         {
-            // Instanciando o tiro
-            Instantiate(meuTiro, transform.position, transform.rotation);
-            // reiniciando o tiro
-            esperaTiro = Random.Range(1.5f, 2f);
+            esperaTiro -= Time.deltaTime;
+            if (esperaTiro <= 0)
+            {
+                // Instanciando o tiro
+                Instantiate(meuTiro, transform.position, transform.rotation);
+                // reiniciando o tiro
+                esperaTiro = Random.Range(1.5f, 2f);
+            }
         }
-        
     }
 }
