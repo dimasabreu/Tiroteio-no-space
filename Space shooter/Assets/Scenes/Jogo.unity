@@ -180,42 +180,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd08693e97dc33944956e0ccb48f4afc, type: 3}
---- !u!4 &802733990 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3052675917392560196, guid: 807580b773d381d46be80790f23a422a, type: 3}
-  m_PrefabInstance: {fileID: 3052675917802841598}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1288231789
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1288231790}
-  m_Layer: 6
-  m_Name: "Posi\xE7\xE3o tiro player"
-  m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1288231790
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288231789}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.589, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 802733990}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &740978203892141580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -324,10 +288,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3052675917392560197, guid: 807580b773d381d46be80790f23a422a, type: 3}
-      propertyPath: posicaoTiro
-      value: 
-      objectReference: {fileID: 1288231790}
     - target: {fileID: 3052675917392560198, guid: 807580b773d381d46be80790f23a422a, type: 3}
       propertyPath: m_Name
       value: Player
@@ -449,6 +409,14 @@ PrefabInstance:
     - target: {fileID: 7885956151607079395, guid: 4df60fdaaf6d9904d8dac00bb1eb3769, type: 3}
       propertyPath: m_Name
       value: Inimigo_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885956151673707640, guid: 4df60fdaaf6d9904d8dac00bb1eb3769, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885956151673707640, guid: 4df60fdaaf6d9904d8dac00bb1eb3769, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1661865603
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df60fdaaf6d9904d8dac00bb1eb3769, type: 3}
