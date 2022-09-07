@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859242368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.036, y: -0.494, z: 0}
+  m_LocalPosition: {x: -0.036, y: -0.629, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42,9 +42,10 @@ GameObject:
   - component: {fileID: 7885956151607079392}
   - component: {fileID: 7885956151607079393}
   - component: {fileID: 7885956151607079394}
+  - component: {fileID: 1370840429}
   m_Layer: 7
   m_Name: Inimigo_1
-  m_TagString: Untagged
+  m_TagString: Inimigo01
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +87,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7885956151607079394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +103,23 @@ MonoBehaviour:
   velocidade: -3
   posicaoTiro: {fileID: 859242369}
   meuTiro: {fileID: 2991548480326138448, guid: aaaff6e4c48b68243a1d873523eb34f1, type: 3}
+  vida: 1
+--- !u!70 &1370840429
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7885956151607079395}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
 --- !u!1 &7885956151673707642
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,8 +191,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1661865603
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1936264071, guid: 67c35fa6d50f8b540bae68abed9ffe73, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
