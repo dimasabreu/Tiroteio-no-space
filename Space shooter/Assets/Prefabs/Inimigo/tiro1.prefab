@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2991548480326138462}
   - component: {fileID: 2991548480326138449}
   - component: {fileID: 2636091652979689136}
+  - component: {fileID: 1838392534130644578}
   m_Layer: 9
   m_Name: tiro1
   m_TagString: Untagged
@@ -137,3 +138,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.135
+--- !u!95 &1838392534130644578
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2991548480326138448}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d701a754fac07794196230d9cfbf8023, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
