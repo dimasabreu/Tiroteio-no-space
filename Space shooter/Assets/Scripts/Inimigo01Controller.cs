@@ -11,6 +11,8 @@ public class Inimigo01Controller : MonoBehaviour
     // meu tiro
     [SerializeField] private GameObject meuTiro;
     // delay do tiro
+    [SerializeField] private int vida = 1;
+
     private float esperaTiro = 1f;
     // Start is called before the first frame update
     void Start()
@@ -40,5 +42,12 @@ public class Inimigo01Controller : MonoBehaviour
                 esperaTiro = Random.Range(1.5f, 2f);
             }
         }
+    }
+    // metodo perde vida
+    public void PerdeVida(int dano)
+    {
+        // perdendo vida
+        vida -= dano;
+        
     }
 }
