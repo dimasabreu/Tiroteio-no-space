@@ -6,7 +6,8 @@ public class TiroController : MonoBehaviour
 {
     private Rigidbody2D meuRB;
     [SerializeField] private float vel = 10f;
-
+    // pegando a animação do final do tiro
+    [SerializeField] private GameObject impacto;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,5 +37,9 @@ public class TiroController : MonoBehaviour
             collision.GetComponent<PlayerController>().PerdeVida(1);
         }
         Destroy(gameObject);
+
+        // criando o impacto do tiro
+        Instantiate(impacto, transform.position, transform.rotation);
+        
     }
 }
