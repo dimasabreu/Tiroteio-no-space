@@ -30,6 +30,11 @@ public class TiroController : MonoBehaviour
             // pegando o metodo perde vida e aplicando o dano
             collision.GetComponent<Inimigo01Controller>().PerdeVida(1);
         }
+        // checando se eu colidi com o player
+        if (collision.CompareTag("Jogador"))
+        {
+            collision.GetComponent<PlayerController>().PerdeVida(1);
+        }
         Destroy(gameObject);
     }
 }
