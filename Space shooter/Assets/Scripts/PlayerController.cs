@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject meuTiro;
     // pegando a posição nova do tiro
     [SerializeField] private Transform posicaoTiro;
+    // vida do player
+    [SerializeField] private int vida = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,5 +35,10 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(meuTiro, posicaoTiro.position, transform.rotation);
         }    
+    }
+
+    public void PerdeVida(int dano)
+    {
+        vida -= dano;
     }
 }
