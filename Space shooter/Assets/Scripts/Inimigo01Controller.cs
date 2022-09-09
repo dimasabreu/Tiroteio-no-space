@@ -48,6 +48,11 @@ public class Inimigo01Controller : MonoBehaviour
     {
         // perdendo vida
         vida -= dano;
+        // checando a morte
+        if (vida <= 0)
+        {
+            Destroy(gameObject);
+        }
         
     }
 }
