@@ -10,6 +10,8 @@ public class Inimigo01Controller : MonoBehaviour
     [SerializeField] private Transform posicaoTiro;
     // meu tiro
     [SerializeField] private GameObject meuTiro;
+    // minha explosão
+    [SerializeField] private GameObject explosao;
     // delay do tiro
     [SerializeField] private int vida = 1;
 
@@ -51,7 +53,10 @@ public class Inimigo01Controller : MonoBehaviour
         // checando a morte
         if (vida <= 0)
         {
+            
             Destroy(gameObject);
+            // instanciado a explosão
+            Instantiate(explosao, transform.position, transform.rotation);
         }
         
     }
