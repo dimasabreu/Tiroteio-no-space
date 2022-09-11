@@ -6,12 +6,14 @@ public class PlayerController : MonoBehaviour
 {   
     private Rigidbody2D meuRB;
     [SerializeField] private float velocidade = 5f;
+    // iniciando o tiro
     [SerializeField] private GameObject meuTiro;
     // pegando a posição nova do tiro
     [SerializeField] private Transform posicaoTiro;
     // vida do player
     [SerializeField] private int vida = 3;
-    
+    // iniciando a explosao qnd morrer
+    [SerializeField] private GameObject explosao;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,5 +43,11 @@ public class PlayerController : MonoBehaviour
     public void PerdeVida(int dano)
     {
         vida -= dano;
+        // instanciando a explosao de destruição
+        if(vida <= 0)
+        {
+            Destroy(gameObject);
+            Instantiate(explosao, transform.position, transform.rotation);
+        }
     }
 }
