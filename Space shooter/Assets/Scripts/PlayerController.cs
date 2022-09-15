@@ -12,9 +12,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform posicaoTiro;
     // vida do player
     [SerializeField] private int vida = 3;
+    // velocidade do tiro 
+    [SerializeField] private float velocidadeTiro = 10f;
     // iniciando a explosao qnd morrer
     [SerializeField] private GameObject explosao;
     // Start is called before the first frame update
+
     void Start()
     {
         meuRB = GetComponent<Rigidbody2D>();
@@ -22,6 +25,24 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        Movendo();
+        Atirando();
+            
+    }
+
+    private void Movendo()
+    {
+        // testando o tiro
+        if (Input.GetButtonDown("Fire1"))
+        {
+            var tiro = Instantiate(meuTiro, posicaoTiro.position, transform.rotation);
+            //direção e velo do tiro
+            tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, velocidadeTiro);
+        }
+    }
+
+    private void Atirando()
     {
         // pegando o input horizontal
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -32,13 +53,8 @@ public class PlayerController : MonoBehaviour
         minhaVelocidade = minhaVelocidade.normalized;
         // passando a velocidade para o rb
         meuRB.velocity = minhaVelocidade * velocidade;
-
-        // testando o tiro
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Instantiate(meuTiro, posicaoTiro.position, transform.rotation);
-        }    
     }
+
 
     public void PerdeVida(int dano)
     {
