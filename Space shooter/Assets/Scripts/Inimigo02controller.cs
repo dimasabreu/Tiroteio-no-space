@@ -38,7 +38,7 @@ public class Inimigo02controller : InimigoPai
                 // Instanciando o tiro
                 Instantiate(meuTiro, posicaoTiro.position, transform.rotation);
                 // reiniciando o tiro
-                esperaTiro = Random.Range(1.5f, 2f);
+                esperaTiro = Random.Range(2f, 4f);
             }
         }
     }
