@@ -134,10 +134,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3279054427636526702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ec6b30d50ccefe44af731e2b7fd2991, type: 3}
+  m_Script: {fileID: 11500000, guid: b9feceb387704f649853015175ba2952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: -6
   impacto: {fileID: 2127252691984195783, guid: 22e17cae8c567ae4b9fa234f1a57878f, type: 3}
 --- !u!111 &-6324479576868801102
 Animation:
