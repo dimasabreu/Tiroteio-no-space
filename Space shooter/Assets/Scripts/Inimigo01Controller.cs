@@ -8,11 +8,8 @@ public class Inimigo01Controller : InimigoPai
     
     // pegando a posição nova do tiro
     [SerializeField] private Transform posicaoTiro;
-    // meu tiro
-    [SerializeField] private GameObject meuTiro;
     
-
-    private float esperaTiro = 1f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +24,11 @@ public class Inimigo01Controller : InimigoPai
     // Update is called once per frame
     void Update()
     {
+        Atirando();
+    }
+
+    private void Atirando()
+    {
         // Checar se a sprite esta visivel pegando info do child
         bool visivel = GetComponentInChildren<SpriteRenderer>().isVisible;
         // diminuir a espera
@@ -36,7 +38,8 @@ public class Inimigo01Controller : InimigoPai
             if (esperaTiro <= 0)
             {
                 // Instanciando o tiro
-                Instantiate(meuTiro, posicaoTiro.position, transform.rotation);
+                var tiro = Instantiate(meuTiro, posicaoTiro.position, transform.rotation);
+                tiro.GetComponent<Rigidbody2D>().velocity = Vector2.down * velocidadeTiro;
                 // reiniciando o tiro
                 esperaTiro = Random.Range(1.5f, 2f);
             }
