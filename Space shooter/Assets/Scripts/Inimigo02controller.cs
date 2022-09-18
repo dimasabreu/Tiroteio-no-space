@@ -36,13 +36,17 @@ public class Inimigo02controller : InimigoPai
         // diminuir a espera
         if (visivel)
         {
-            esperaTiro -= Time.deltaTime;
+            // encontrando o player
+            var player = FindObjectOfType<PlayerController>();
+            // so fazer qualquer coisa se o player existir
+            if (player)
+            {
+                esperaTiro -= Time.deltaTime;
             if (esperaTiro <= 0)
             {
                 // Instanciando o tiro
                 var tiro = Instantiate(meuTiro, posicaoTiro.position, transform.rotation);
-                // encontrando o player
-                var player = FindObjectOfType<PlayerController>();
+                
                 // encontrando o valor da direção
                 Vector2 direcao = player.transform.position - tiro.transform.position;
                 // normalizando a velocidade do tiro 
@@ -56,7 +60,9 @@ public class Inimigo02controller : InimigoPai
                 
                 // reiniciando o tiro
                 esperaTiro = Random.Range(2f, 4f);
+            }   
             }
+            
         }
     }
 }
