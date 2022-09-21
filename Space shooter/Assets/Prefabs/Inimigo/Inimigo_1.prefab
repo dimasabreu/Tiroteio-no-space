@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9df54fb1eb26f468a8468f5066552c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: -3
+  velocidade: -4
   vida: 1
   esperaTiro: 1
   velocidadeTiro: 5
