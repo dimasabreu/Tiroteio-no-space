@@ -25,10 +25,7 @@ public class Inimigo01Controller : InimigoPai
     void Update()
     {
         Atirando();
-        if(transform.position.y < yDEAD)
-        {
-            Destroy(gameObject);
-        }
+        seMata();
     }
 
     private void Atirando()
