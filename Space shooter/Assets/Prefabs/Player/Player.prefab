@@ -190,6 +190,7 @@ MonoBehaviour:
   vida: 3
   velocidadeTiro: 10
   explosao: {fileID: 3462492383453476511, guid: ec806a9a9a619fc489e10c16683e231f, type: 3}
+  esperaTiro: 0
 --- !u!50 &3052675917392560199
 Rigidbody2D:
   serializedVersion: 4
