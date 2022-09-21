@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float velocidade = 5f;
     // iniciando o tiro
     [SerializeField] private GameObject meuTiro;
+    [SerializeField] private GameObject meuTiro2;
     // pegando a posição nova do tiro
     [SerializeField] private Transform posicaoTiro;
     // vida do player
@@ -23,6 +24,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float yMin;
     [SerializeField] private float yMax;
 
+    [SerializeField] private int levelTiro = 1;
+
     void Start()
     {
         meuRB = GetComponent<Rigidbody2D>();
@@ -38,25 +41,77 @@ public class PlayerController : MonoBehaviour
 
     private void Atirando()
     {
-        if (Input.GetButton("Fire1"))
+        if(levelTiro == 1)
         {
-            esperaTiro -= Time.deltaTime;
-            if (esperaTiro <= 0)
+            if (Input.GetButton("Fire1"))
             {
-                var tiro = Instantiate(meuTiro, posicaoTiro.position, transform.rotation);
-                //direção e velo do tiro
-                tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, velocidadeTiro);
-                esperaTiro = (0.1f);
+                esperaTiro -= Time.deltaTime;
+                if (esperaTiro <= 0)
+                {
+                    CriaTiro(meuTiro, posicaoTiro.position);
+                }
+            }
+            if (Input.GetButtonUp("Fire1"))
+            {
+                CriaTiro(meuTiro, posicaoTiro.position);
             }
         }
-        // testando o tiro
-        if (Input.GetButtonUp("Fire1"))
+        if(levelTiro == 2)
         {
-            var tiro = Instantiate(meuTiro, posicaoTiro.position, transform.rotation);
-            //direção e velo do tiro
-            tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, velocidadeTiro);
+            if (Input.GetButton("Fire1"))
+            {
+                esperaTiro -= Time.deltaTime;
+                if (esperaTiro <= 0)
+                {
+                    // criando 2 tiros nas asas
+                    Vector3 posicaoe = new Vector3(transform.position.x - 0.45f, transform.position.y + 0.1f, 0f);
+                    Vector3 posicaod = new Vector3(transform.position.x + 0.45f, transform.position.y + 0.1f, 0f);
+                    CriaTiro(meuTiro2, posicaoe);
+                    CriaTiro(meuTiro2, posicaod);
+                }
+            }
+            if (Input.GetButtonUp("Fire1"))
+            {
+                Vector3 posicaoe = new Vector3(transform.position.x - 0.45f, transform.position.y + 0.1f, 0f);
+                Vector3 posicaod = new Vector3(transform.position.x + 0.45f, transform.position.y + 0.1f, 0f);
+                CriaTiro(meuTiro2, posicaoe);
+                CriaTiro(meuTiro2, posicaod);
+            }
+        }
+         if(levelTiro == 3)
+        {
+            if (Input.GetButton("Fire1"))
+            {
+                esperaTiro -= Time.deltaTime;
+                if (esperaTiro <= 0)
+                {
+                    // criando 2 tiros nas asas
+                    Vector3 posicaoe = new Vector3(transform.position.x - 0.45f, transform.position.y + 0.1f, 0f);
+                    Vector3 posicaod = new Vector3(transform.position.x + 0.45f, transform.position.y + 0.1f, 0f);
+                    CriaTiro(meuTiro, posicaoTiro.position);
+                    CriaTiro(meuTiro2, posicaoe);
+                    CriaTiro(meuTiro2, posicaod);
+                }
+            }
+            if (Input.GetButtonUp("Fire1"))
+            {
+                Vector3 posicaoe = new Vector3(transform.position.x - 0.45f, transform.position.y + 0.1f, 0f);
+                Vector3 posicaod = new Vector3(transform.position.x + 0.45f, transform.position.y + 0.1f, 0f);
+                CriaTiro(meuTiro, posicaoTiro.position);
+                CriaTiro(meuTiro2, posicaoe);
+                CriaTiro(meuTiro2, posicaod);
+            }
         }
         
+
+    }
+
+    private void CriaTiro(GameObject tiroCriado, Vector3 posicao)
+    {
+        GameObject tiro = Instantiate(tiroCriado, posicao, transform.rotation);
+        //direção e velo do tiro
+        tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, velocidadeTiro);
+        esperaTiro = (0.1f);
     }
 
     private void Movendo()
