@@ -25,6 +25,10 @@ public class Inimigo01Controller : InimigoPai
     void Update()
     {
         Atirando();
+        if(transform.position.y < yDEAD)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Atirando()
@@ -32,7 +36,7 @@ public class Inimigo01Controller : InimigoPai
         // Checar se a sprite esta visivel pegando info do child
         bool visivel = GetComponentInChildren<SpriteRenderer>().isVisible;
         // diminuir a espera
-        if (visivel)
+        if(visivel)
         {
             esperaTiro -= Time.deltaTime;
             if (esperaTiro <= 0)
