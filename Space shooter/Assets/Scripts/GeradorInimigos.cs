@@ -22,6 +22,9 @@ public class GeradorInimigos : MonoBehaviour
     private float esperaInimigo = 0f;
     [SerializeField] private float tempoEspera = 5f;
 
+    // criando o bg
+    [SerializeField] private GameObject[] fundo;
+    private int qtdFundo = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +35,7 @@ public class GeradorInimigos : MonoBehaviour
     void Update()
     {
         GeraInimigos();
+        geraFundo();
     }
 
     public void GanhaPontos(int pontos)
@@ -85,6 +89,20 @@ public class GeradorInimigos : MonoBehaviour
 
                 // reiniciando a espera
                 esperaInimigo = tempoEspera;
+            }
+        }
+    }
+
+    private void geraFundo()
+    {
+        if(level == 1)
+        {
+            qtdFundo++;
+            if ( qtdFundo == 1)
+            {
+                Vector3 posicaoFundo = new Vector3(0f, 6f, 0f);
+                Instantiate(fundo[0], posicaoFundo, transform.rotation);
+                
             }
         }
     }
