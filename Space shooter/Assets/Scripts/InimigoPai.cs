@@ -37,7 +37,19 @@ public class InimigoPai : MonoBehaviour
             Instantiate(explosao, transform.position, transform.rotation);
         }
     }
-
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        // checando se eu colidi com o player
+        if (other.gameObject.CompareTag("Jogador"))
+        {
+            other.gameObject.GetComponent<PlayerController>().PerdeVida(1);
+            Destroy(gameObject);
+            // criando o impacto da batida
+            Instantiate(explosao, transform.position, transform.rotation);
+        }
+        
+        
+    }
     
 
 }
