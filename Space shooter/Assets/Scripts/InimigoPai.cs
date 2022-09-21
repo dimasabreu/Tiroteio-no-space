@@ -14,6 +14,7 @@ public class InimigoPai : MonoBehaviour
     [SerializeField] protected GameObject explosao;
 
     [SerializeField] protected float yDEAD = -7f;
+    [SerializeField] protected int pontos = 10;
 
     void Start()
     {
@@ -28,13 +29,22 @@ public class InimigoPai : MonoBehaviour
     // metodo de perder vida
     public void PerdeVida(int dano)
     {
-        vida -= dano;
-
-        if (vida <= 0)
+        // so perde vida se o y for menor do q 5
+        if (transform.position.y < 5f)
         {
-            Destroy(gameObject);
+            vida -= dano;
 
-            Instantiate(explosao, transform.position, transform.rotation);
+            if (vida <= 0)
+            {
+                Destroy(gameObject);
+
+                Instantiate(explosao, transform.position, transform.rotation);
+                // ganhando pontos
+                var gerador = FindObjectOfType<GeradorInimigos>();
+                gerador.DiminuiQuantidade();
+                gerador.GanhaPontos(pontos);
+
+            }
         }
     }
 
@@ -45,6 +55,8 @@ public class InimigoPai : MonoBehaviour
         if(transform.position.y < yDEAD)
             {
                 Destroy(gameObject);
+                var gerador = FindObjectOfType<GeradorInimigos>();
+                gerador.DiminuiQuantidade();
             }
     }
 
@@ -57,6 +69,8 @@ public class InimigoPai : MonoBehaviour
         {
             other.gameObject.GetComponent<PlayerController>().PerdeVida(1);
             Destroy(gameObject);
+            var gerador = FindObjectOfType<GeradorInimigos>();
+            gerador.DiminuiQuantidade();
             // criando o impacto da batida
             Instantiate(explosao, transform.position, transform.rotation);
         }
