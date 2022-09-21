@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -20,6 +18,10 @@ public class PlayerController : MonoBehaviour
     // delay do tiro
     [SerializeField] public float esperaTiro = 0f;
     // Start is called before the first frame update
+    [SerializeField] private float xMin;
+    [SerializeField] private float xMax;
+    [SerializeField] private float yMin;
+    [SerializeField] private float yMax;
 
     void Start()
     {
@@ -31,7 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         Movendo();
         Atirando();
-            
+        SaindoTela();
     }
 
     private void Atirando()
@@ -81,4 +83,28 @@ public class PlayerController : MonoBehaviour
             Instantiate(explosao, transform.position, transform.rotation);
         }
     }
+    public void SaindoTela()
+    {
+        if(gameObject.transform.position.x < xMin)
+            {
+                var yAtual = gameObject.transform.position.y;
+                gameObject.transform.position = new Vector3(xMax, yAtual, 0f);
+            }
+        if(gameObject.transform.position.x > xMax)
+            {
+                var yAtual = gameObject.transform.position.y;
+                gameObject.transform.position = new Vector3(xMin, yAtual, 0f);
+            }
+        if(gameObject.transform.position.y < yMin)
+            {
+                var xAtual = gameObject.transform.position.x;
+                gameObject.transform.position = new Vector3(xAtual, yMax, 0f);
+            }
+        if(gameObject.transform.position.y > yMax)
+            {
+                var xAtual = gameObject.transform.position.x;
+                gameObject.transform.position = new Vector3(xAtual, yMin, 0f);
+            }
+    }
 }
+
