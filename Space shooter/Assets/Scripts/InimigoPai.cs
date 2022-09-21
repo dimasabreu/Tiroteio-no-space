@@ -37,6 +37,19 @@ public class InimigoPai : MonoBehaviour
             Instantiate(explosao, transform.position, transform.rotation);
         }
     }
+
+
+    // metodo de se matar
+    public void seMata()
+    {
+        if(transform.position.y < yDEAD)
+            {
+                Destroy(gameObject);
+            }
+    }
+
+
+    // metodo de colisao
     private void OnCollisionEnter2D(Collision2D other) 
     {
         // checando se eu colidi com o player
@@ -47,8 +60,6 @@ public class InimigoPai : MonoBehaviour
             // criando o impacto da batida
             Instantiate(explosao, transform.position, transform.rotation);
         }
-        
-        
     }
     
 
