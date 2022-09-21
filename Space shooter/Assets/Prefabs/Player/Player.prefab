@@ -188,6 +188,7 @@ MonoBehaviour:
   meuTiro: {fileID: 1325945324681076636, guid: ebe2533dd44835848ba9232eb4fcac71, type: 3}
   posicaoTiro: {fileID: 1288231790}
   vida: 3
+  velocidadeTiro: 10
   explosao: {fileID: 3462492383453476511, guid: ec806a9a9a619fc489e10c16683e231f, type: 3}
 --- !u!50 &3052675917392560199
 Rigidbody2D:
@@ -197,7 +198,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3052675917392560198}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
