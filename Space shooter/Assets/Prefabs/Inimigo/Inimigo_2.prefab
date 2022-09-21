@@ -56,7 +56,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &1346302146010843382
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -67,7 +67,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -87,9 +87,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: -3
   vida: 1
-  explosao: {fileID: 3462492383453476511, guid: ec806a9a9a619fc489e10c16683e231f, type: 3}
-  posicaoTiro: {fileID: 4250862766768231371}
+  esperaTiro: 1
+  velocidadeTiro: 5
   meuTiro: {fileID: 3279054427636526702, guid: 3baa39bfb2a68c649b043a884e0f1e0c, type: 3}
+  explosao: {fileID: 3462492383453476511, guid: ec806a9a9a619fc489e10c16683e231f, type: 3}
+  yDEAD: -7
+  posicaoTiro: {fileID: 4250862766768231371}
+  yMax: 2.5
+  xMin: 0
 --- !u!1 &1346302147142762925
 GameObject:
   m_ObjectHideFlags: 0
