@@ -29,28 +29,11 @@ public class Inimigo02controller : InimigoPai
     void Update()
     {
         Atirando();
-        if(transform.position.y < yDEAD)
-        {
-            Destroy(gameObject);
-        }
-        // chegando se ja estou no meio da tela
-        if(transform.position.y < yMax && possoMover)
-        {
-            if(transform.position.x > xMin)
-            {
-                meuRB.velocity = new Vector2(velocidade, velocidade);
-
-                //falando que eu não posso mais me mover
-                possoMover = false;
-            }
-            if(transform.position.x < xMin)
-            {
-                meuRB.velocity = new Vector2(-velocidade, velocidade);
-                possoMover = false;
-            }
-        }
+        seMovendo();
+        seMata();
     }
 
+    // atirando
     private void Atirando()
     {
         // Checar se a sprite esta visivel pegando info do child
@@ -87,4 +70,27 @@ public class Inimigo02controller : InimigoPai
             
         }
     }
+
+    // movendo
+    private void seMovendo()
+    {
+         // chegando se ja estou no meio da tela
+        if(transform.position.y < yMax && possoMover)
+        {
+            if(transform.position.x > xMin)
+            {
+                meuRB.velocity = new Vector2(velocidade, velocidade);
+
+                //falando que eu não posso mais me mover
+                possoMover = false;
+            }
+            if(transform.position.x < xMin)
+            {
+                meuRB.velocity = new Vector2(-velocidade, velocidade);
+                possoMover = false;
+            }
+        }
+    }
+
 }
+
