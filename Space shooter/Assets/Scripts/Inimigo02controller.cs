@@ -8,8 +8,10 @@ public class Inimigo02controller : InimigoPai
     
     // pegando a posição nova do tiro
     [SerializeField] private Transform posicaoTiro;
+    [SerializeField] private float yMax = 2.5f;
+    [SerializeField] private float xMin = 0f;
    
-    
+    private bool possoMover = true;
 
  
     // Start is called before the first frame update
@@ -27,6 +29,26 @@ public class Inimigo02controller : InimigoPai
     void Update()
     {
         Atirando();
+        if(transform.position.y < yDEAD)
+        {
+            Destroy(gameObject);
+        }
+        // chegando se ja estou no meio da tela
+        if(transform.position.y < yMax && possoMover)
+        {
+            if(transform.position.x > xMin)
+            {
+                meuRB.velocity = new Vector2(velocidade, velocidade);
+
+                //falando que eu não posso mais me mover
+                possoMover = false;
+            }
+            if(transform.position.x < xMin)
+            {
+                meuRB.velocity = new Vector2(-velocidade, velocidade);
+                possoMover = false;
+            }
+        }
     }
 
     private void Atirando()
