@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e73d18c41d0bf409d20b58b3d7236d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: -4
+  velocidade: -3
   vida: 1
   esperaTiro: 1
   velocidadeTiro: 5
