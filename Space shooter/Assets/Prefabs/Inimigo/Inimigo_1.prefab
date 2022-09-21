@@ -102,9 +102,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: -3
   vida: 1
-  explosao: {fileID: 3462492383453476511, guid: ec806a9a9a619fc489e10c16683e231f, type: 3}
-  posicaoTiro: {fileID: 859242369}
+  esperaTiro: 1
+  velocidadeTiro: 5
   meuTiro: {fileID: 2991548480326138448, guid: aaaff6e4c48b68243a1d873523eb34f1, type: 3}
+  explosao: {fileID: 3462492383453476511, guid: ec806a9a9a619fc489e10c16683e231f, type: 3}
+  yDEAD: -7
+  posicaoTiro: {fileID: 859242369}
 --- !u!70 &1370840429
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -115,7 +118,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
