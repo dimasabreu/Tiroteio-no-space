@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float velocidadeTiro = 10f;
     // iniciando a explosao qnd morrer
     [SerializeField] private GameObject explosao;
+
+    // delay do tiro
+    [SerializeField] public float esperaTiro = 0f;
     // Start is called before the first frame update
 
     void Start()
@@ -31,18 +34,30 @@ public class PlayerController : MonoBehaviour
             
     }
 
-    private void Movendo()
+    private void Atirando()
     {
+        if (Input.GetButton("Fire1"))
+        {
+            esperaTiro -= Time.deltaTime;
+            if (esperaTiro <= 0)
+            {
+                var tiro = Instantiate(meuTiro, posicaoTiro.position, transform.rotation);
+                //direção e velo do tiro
+                tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, velocidadeTiro);
+                esperaTiro = (0.1f);
+            }
+        }
         // testando o tiro
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonUp("Fire1"))
         {
             var tiro = Instantiate(meuTiro, posicaoTiro.position, transform.rotation);
             //direção e velo do tiro
             tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, velocidadeTiro);
         }
+        
     }
 
-    private void Atirando()
+    private void Movendo()
     {
         // pegando o input horizontal
         float horizontal = Input.GetAxisRaw("Horizontal");
