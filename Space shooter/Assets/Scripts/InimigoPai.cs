@@ -13,6 +13,8 @@ public class InimigoPai : MonoBehaviour
     [SerializeField] protected GameObject meuTiro;
     [SerializeField] protected GameObject explosao;
 
+    [SerializeField] protected float yDEAD = -7f;
+
     void Start()
     {
         
@@ -35,5 +37,7 @@ public class InimigoPai : MonoBehaviour
             Instantiate(explosao, transform.position, transform.rotation);
         }
     }
+
+    
 
 }
