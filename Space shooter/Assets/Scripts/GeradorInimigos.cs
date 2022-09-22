@@ -14,7 +14,7 @@ public class GeradorInimigos : MonoBehaviour
     [SerializeField] private int level = 1;
 
     // tanto para lvl up
-    [SerializeField] private int levelUp = 100;
+    [SerializeField] private float levelUp = 100;
 
     // quantidade de inimigos
     [SerializeField] private int qtdInimigo = 0;
@@ -44,9 +44,12 @@ public class GeradorInimigos : MonoBehaviour
         if(this.pontos >= levelUp)
         {
             level++;
-            levelUp = levelUp * level;
+            levelUp = (levelUp * level) / 1.5f;
         }
     }
+
+
+
 
     // checando a quantidade de inimigos
     public void DiminuiQuantidade()
@@ -82,7 +85,7 @@ public class GeradorInimigos : MonoBehaviour
                 }
 
                 // posiccao do inimigo
-                Vector3 posicao = new Vector3(Random.Range(-10f, 9f), Random.Range(6f, 17f), 0f);
+                Vector3 posicao = new Vector3(Random.Range(-8.4f, 8.40f), Random.Range(6f, 17f), 0f);
                 // criando o inimigo
                 Instantiate(inimigoCriado, posicao, transform.rotation);
                 qtdInimigo++;
