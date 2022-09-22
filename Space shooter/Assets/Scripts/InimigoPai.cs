@@ -7,7 +7,7 @@ public class InimigoPai : MonoBehaviour
     // Start is called before the first frame update
     // atributos que todos os inimigos tem
     [SerializeField] protected float velocidade;
-    [SerializeField] protected int vida;
+    [SerializeField] public int vida = 1;
     [SerializeField] protected float esperaTiro = 1f;
     [SerializeField] protected float velocidadeTiro = 5f;
     [SerializeField] protected GameObject meuTiro;
