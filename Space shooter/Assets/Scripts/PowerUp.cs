@@ -5,6 +5,7 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
     private Rigidbody2D meuRB;
+    private Color minhacor;
     
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class PowerUp : MonoBehaviour
         // colocando a velocidade no rb
         var vel = Random.Range(-1f, 1f);
         meuRB.velocity = new Vector2(vel, vel);
+        Trocacor();
     }
 
     // Update is called once per frame
@@ -22,7 +24,22 @@ public class PowerUp : MonoBehaviour
         
     }
 
-
+    private void Trocacor()
+    {
+        var chance = Random.Range(0f, 1f);
+        if(chance <= 1 && chance > 0.7)
+        {
+            minhacor = GetComponent<Renderer>().material.color = Color.yellow;
+        }
+        if(chance <= 0.7 && chance > 0.5)
+        {
+            minhacor = GetComponent<Renderer>().material.color = Color.red;
+        }
+        if(chance <= 0.5)
+        {
+            minhacor = GetComponent<Renderer>().material.color = Color.cyan;
+        }
+    }
 
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -30,8 +47,23 @@ public class PowerUp : MonoBehaviour
         // checando se eu colidi com o player
         if (other.gameObject.CompareTag("Jogador"))
         {
-            other.gameObject.GetComponent<PlayerController>().Upando(1);
-            Destroy(gameObject);
+            if (minhacor == Color.yellow)
+            {       
+                other.gameObject.GetComponent<PlayerController>().Upando(1);
+                Destroy(gameObject);
+            }
+            if (minhacor == Color.red)
+            {       
+                other.gameObject.GetComponent<PlayerController>().Curando(1);
+                Destroy(gameObject);
+            }
+            if (minhacor == Color.cyan)
+            {       
+                other.gameObject.GetComponent<PlayerController>().ganhaVelo(1);
+                Destroy(gameObject);
+            }
+
+
         }
     }
 }
