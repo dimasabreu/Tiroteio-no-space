@@ -109,6 +109,7 @@ MonoBehaviour:
   yDEAD: -7
   pontos: 10
   powerUP: {fileID: 2616740292979747732, guid: a9f7b901ae24a5642bec70c7fb99e65b, type: 3}
+  dropPowerUP: 0.9
   posicaoTiro: {fileID: 859242369}
 --- !u!70 &1370840429
 CapsuleCollider2D:
