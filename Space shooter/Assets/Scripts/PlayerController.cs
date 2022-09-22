@@ -146,6 +146,15 @@ public class PlayerController : MonoBehaviour
         }    
     }
 
+    public void Curando(int cura)
+    {
+        vida += cura;
+    }
+
+    public void ganhaVelo(float velo)
+    {
+        velocidade += velo;
+    }
 
     public void SaindoTela()
     {
