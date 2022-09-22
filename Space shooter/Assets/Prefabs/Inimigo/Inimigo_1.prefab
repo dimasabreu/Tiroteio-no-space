@@ -107,6 +107,8 @@ MonoBehaviour:
   meuTiro: {fileID: 2991548480326138448, guid: aaaff6e4c48b68243a1d873523eb34f1, type: 3}
   explosao: {fileID: 3462492383453476511, guid: ec806a9a9a619fc489e10c16683e231f, type: 3}
   yDEAD: -7
+  pontos: 10
+  powerUP: {fileID: 2616740292979747732, guid: a9f7b901ae24a5642bec70c7fb99e65b, type: 3}
   posicaoTiro: {fileID: 859242369}
 --- !u!70 &1370840429
 CapsuleCollider2D:
