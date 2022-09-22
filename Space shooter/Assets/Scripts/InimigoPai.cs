@@ -18,7 +18,7 @@ public class InimigoPai : MonoBehaviour
 
     // criando o drop do power up
     [SerializeField] protected GameObject powerUP;
-    // [SerializeField] protected int chancePowerUP;
+    [SerializeField] protected float dropPowerUP;
     void Start()
     {
         
@@ -44,18 +44,27 @@ public class InimigoPai : MonoBehaviour
                 Instantiate(explosao, transform.position, transform.rotation);
                 // ganhando pontos
                 var gerador = FindObjectOfType<GeradorInimigos>();
-                gerador.DiminuiQuantidade();
                 gerador.GanhaPontos(pontos);
-                var chancePowerUP = 10;
-                if(chancePowerUP <= 10)
+                var chancePowerUP = Random.Range(0f, 1f);
+                if(chancePowerUP > dropPowerUP)
                 {
-                    Instantiate(powerUP, transform.position, transform.rotation);
+                    GameObject pU = Instantiate(powerUP, transform.position, transform.rotation);
+                    Destroy(pU, 3f);
                 }
 
             }
         }
     }
 
+    // evento de quando se destruir
+    private void OnDestroy() 
+    {
+        var gerador = FindObjectOfType<GeradorInimigos>();
+        if (gerador)
+        {
+            gerador.DiminuiQuantidade();
+        }
+    }
 
     // metodo de se matar
     public void seMata()
@@ -63,8 +72,6 @@ public class InimigoPai : MonoBehaviour
         if(transform.position.y < yDEAD)
             {
                 Destroy(gameObject);
-                var gerador = FindObjectOfType<GeradorInimigos>();
-                gerador.DiminuiQuantidade();
             }
     }
 
@@ -77,8 +84,6 @@ public class InimigoPai : MonoBehaviour
         {
             other.gameObject.GetComponent<PlayerController>().PerdeVida(1);
             Destroy(gameObject);
-            var gerador = FindObjectOfType<GeradorInimigos>();
-            gerador.DiminuiQuantidade();
             // criando o impacto da batida
             Instantiate(explosao, transform.position, transform.rotation);
         }
