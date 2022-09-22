@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-
+    private Rigidbody2D meuRB;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        // pegnado o rb
+        meuRB = GetComponent<Rigidbody2D>();
+        // colocando a velocidade no rb
+        var vel = Random.Range(-2f, 2f);
+        meuRB.velocity = new Vector2(vel, vel);
     }
 
     // Update is called once per frame
