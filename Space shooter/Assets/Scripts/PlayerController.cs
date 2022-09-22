@@ -7,10 +7,15 @@ public class PlayerController : MonoBehaviour
     // iniciando o tiro
     [SerializeField] private GameObject meuTiro;
     [SerializeField] private GameObject meuTiro2;
+    // pegando o escudo
+    [SerializeField] private GameObject meuEscudo;
+    private GameObject escudoAtual;
     // pegando a posição nova do tiro
     [SerializeField] private Transform posicaoTiro;
     // vida do player
     [SerializeField] private int vida = 3;
+    // escudos
+    [SerializeField] private int escudo = 3;
     // velocidade do tiro 
     [SerializeField] private float velocidadeTiro = 10f;
     // iniciando a explosao qnd morrer
@@ -37,6 +42,7 @@ public class PlayerController : MonoBehaviour
         Movendo();
         Atirando();
         SaindoTela();
+        Escudo();
     }
 
     private void Atirando()
@@ -126,6 +132,31 @@ public class PlayerController : MonoBehaviour
         // passando a velocidade para o rb
         meuRB.velocity = minhaVelocidade * velocidade;
     }
+
+    private void Escudo()
+    {
+        
+        if (Input.GetButtonDown("Shield") && escudo > 0)
+        {
+            // Instanciando o escudo
+            
+            if (!escudoAtual)
+            {
+                escudoAtual = Instantiate(meuEscudo, transform.position, transform.rotation);
+                Destroy(escudoAtual, 3.2f);
+                escudo--;
+            }
+                
+        }
+        if (escudoAtual)
+            {
+                escudoAtual.transform.position = transform.position;
+            }
+        
+        
+    }
+
+
 
     public void PerdeVida(int dano)
     {
