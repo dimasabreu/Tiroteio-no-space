@@ -48,8 +48,13 @@ public class InimigoPai : MonoBehaviour
                 var chancePowerUP = Random.Range(0f, 1f);
                 if(chancePowerUP > dropPowerUP)
                 {
-                    GameObject pU = Instantiate(powerUP, transform.position, transform.rotation);
-                    Destroy(pU, 3f);
+                    var chanceColor = Random.Range(0f, 1f);
+                    if (chanceColor > 0)
+                    {
+                        GameObject pU = Instantiate(powerUP, transform.position, transform.rotation);
+                        Destroy(pU, 3f);
+                    }
+                    
                 }
 
             }
