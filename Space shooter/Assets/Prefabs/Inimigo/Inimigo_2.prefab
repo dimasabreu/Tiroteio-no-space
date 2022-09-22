@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: -3
-  vida: 1
+  vida: 2
   esperaTiro: 1
   velocidadeTiro: 5
   meuTiro: {fileID: 3279054427636526702, guid: 3baa39bfb2a68c649b043a884e0f1e0c, type: 3}
