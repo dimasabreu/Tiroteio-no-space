@@ -25,6 +25,12 @@ public class GeradorInimigos : MonoBehaviour
     // criando o bg
     [SerializeField] private GameObject[] fundo;
     private int qtdFundo = 0;
+
+
+    // acessando o inimigpai
+    public Inimigo01Controller Inimigo01script;
+    public Inimigo02controller Inimigo02script;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -78,10 +84,28 @@ public class GeradorInimigos : MonoBehaviour
                 if (chance < 2f)
                 {
                     inimigoCriado = inimigos[0];
+                    Inimigo01script.vida = 1;
+                    if (level == 2)
+                    {
+                        Inimigo01script.vida = 2;
+                    }
+                    if (level >= 3)
+                    {
+                        Inimigo01script.vida = 3;
+                    }
                 }
                 else
                 {
                     inimigoCriado = inimigos[1];
+                    Inimigo02script.vida = 1;
+                    if (level == 3)
+                    {
+                        Inimigo02script.vida = 2;
+                    }
+                    if (level >= 4)
+                    {
+                        Inimigo02script.vida = 3;
+                    }
                 }
 
                 // posiccao do inimigo
