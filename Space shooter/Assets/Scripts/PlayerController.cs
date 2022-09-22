@@ -127,7 +127,6 @@ public class PlayerController : MonoBehaviour
         meuRB.velocity = minhaVelocidade * velocidade;
     }
 
-
     public void PerdeVida(int dano)
     {
         vida -= dano;
@@ -138,6 +137,16 @@ public class PlayerController : MonoBehaviour
             Instantiate(explosao, transform.position, transform.rotation);
         }
     }
+
+    public void Upando(int xp)
+    {
+        if (levelTiro < 3)
+        {
+            levelTiro += xp;
+        }    
+    }
+
+
     public void SaindoTela()
     {
         if(gameObject.transform.position.x < xMin)
