@@ -11,7 +11,7 @@ public class GeradorInimigos : MonoBehaviour
     [SerializeField] private int pontos = 0;
 
     // level
-    [SerializeField] private int level = 1;
+    [SerializeField] public int level = 1;
 
     // tanto para lvl up
     [SerializeField] private float levelUp = 100;
@@ -27,7 +27,7 @@ public class GeradorInimigos : MonoBehaviour
     private int qtdFundo = 0;
 
 
-    // acessando o inimigpai
+    // acessando os inimigos
     public Inimigo01Controller Inimigo01script;
     public Inimigo02controller Inimigo02script;
 
@@ -85,26 +85,32 @@ public class GeradorInimigos : MonoBehaviour
                 {
                     inimigoCriado = inimigos[0];
                     Inimigo01script.vida = 1;
+                    Inimigo01script.pontos = 10;
                     if (level == 2)
                     {
                         Inimigo01script.vida = 2;
+                        Inimigo01script.pontos = 15;
                     }
                     if (level >= 3)
                     {
                         Inimigo01script.vida = 3;
+                        Inimigo01script.pontos = 20;
                     }
                 }
                 else
                 {
                     inimigoCriado = inimigos[1];
                     Inimigo02script.vida = 1;
+                    Inimigo02script.pontos = 15;
                     if (level == 3)
                     {
                         Inimigo02script.vida = 2;
+                        Inimigo02script.pontos = 20;
                     }
                     if (level >= 4)
                     {
                         Inimigo02script.vida = 3;
+                        Inimigo02script.pontos = 25;
                     }
                 }
 
