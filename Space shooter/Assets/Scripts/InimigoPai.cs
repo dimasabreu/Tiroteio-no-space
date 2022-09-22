@@ -101,6 +101,26 @@ public class InimigoPai : MonoBehaviour
             Instantiate(explosao, transform.position, transform.rotation);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if (other.CompareTag("Escudo"))
+        {
+            Destroy(gameObject);
+            Instantiate(explosao, transform.position, transform.rotation);
+            var gerador = FindObjectOfType<GeradorInimigos>();
+            gerador.GanhaPontos(pontos);
+            var chancePowerUP = Random.Range(0f, 1f);
+                if(chancePowerUP > dropPowerUP)
+                {
+                    
+                    GameObject pU = Instantiate(powerUP, transform.position, transform.rotation);
+                    Destroy(pU, 3f);
+                    
+                }
+
+        }
+    }
     
 
 }
