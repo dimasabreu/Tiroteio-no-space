@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Inimigo
   - Jogador
+  - PowerUp
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Inimigo
   - Tiro Player
   - Tiro Inimigo
-  - 
+  - PowerUp
   - 
   - 
   - 
