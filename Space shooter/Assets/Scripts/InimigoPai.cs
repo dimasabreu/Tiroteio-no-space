@@ -14,7 +14,7 @@ public class InimigoPai : MonoBehaviour
     [SerializeField] protected GameObject explosao;
 
     [SerializeField] protected float yDEAD = -7f;
-    [SerializeField] protected int pontos = 10;
+    [SerializeField] public int pontos = 10;
 
     // criando o drop do power up
     [SerializeField] protected GameObject powerUP;
@@ -48,12 +48,10 @@ public class InimigoPai : MonoBehaviour
                 var chancePowerUP = Random.Range(0f, 1f);
                 if(chancePowerUP > dropPowerUP)
                 {
-                    var chanceColor = Random.Range(0f, 1f);
-                    if (chanceColor > 0)
-                    {
-                        GameObject pU = Instantiate(powerUP, transform.position, transform.rotation);
-                        Destroy(pU, 3f);
-                    }
+                    
+                    GameObject pU = Instantiate(powerUP, transform.position, transform.rotation);
+                    Destroy(pU, 3f);
+                    
                     
                 }
 
@@ -88,6 +86,16 @@ public class InimigoPai : MonoBehaviour
         if (other.gameObject.CompareTag("Jogador"))
         {
             other.gameObject.GetComponent<PlayerController>().PerdeVida(1);
+            var gerador = FindObjectOfType<GeradorInimigos>();
+            gerador.GanhaPontos(pontos);
+            var chancePowerUP = Random.Range(0f, 1f);
+                if(chancePowerUP > dropPowerUP)
+                {
+                    
+                    GameObject pU = Instantiate(powerUP, transform.position, transform.rotation);
+                    Destroy(pU, 3f);
+                    
+                }
             Destroy(gameObject);
             // criando o impacto da batida
             Instantiate(explosao, transform.position, transform.rotation);
