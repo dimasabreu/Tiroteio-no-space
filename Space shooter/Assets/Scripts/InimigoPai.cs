@@ -16,6 +16,9 @@ public class InimigoPai : MonoBehaviour
     [SerializeField] protected float yDEAD = -7f;
     [SerializeField] protected int pontos = 10;
 
+    // criando o drop do power up
+    [SerializeField] protected GameObject powerUP;
+    // [SerializeField] protected int chancePowerUP;
     void Start()
     {
         
@@ -43,6 +46,11 @@ public class InimigoPai : MonoBehaviour
                 var gerador = FindObjectOfType<GeradorInimigos>();
                 gerador.DiminuiQuantidade();
                 gerador.GanhaPontos(pontos);
+                var chancePowerUP = 10;
+                if(chancePowerUP <= 10)
+                {
+                    Instantiate(powerUP, transform.position, transform.rotation);
+                }
 
             }
         }
