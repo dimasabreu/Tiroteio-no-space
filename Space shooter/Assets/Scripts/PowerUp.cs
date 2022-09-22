@@ -12,7 +12,7 @@ public class PowerUp : MonoBehaviour
         // pegnado o rb
         meuRB = GetComponent<Rigidbody2D>();
         // colocando a velocidade no rb
-        var vel = Random.Range(-2f, 2f);
+        var vel = Random.Range(-1f, 1f);
         meuRB.velocity = new Vector2(vel, vel);
     }
 
@@ -21,6 +21,9 @@ public class PowerUp : MonoBehaviour
     {
         
     }
+
+
+
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
