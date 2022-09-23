@@ -258,11 +258,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8397440856588887471, guid: cfb939a2b05150344a4e286554bcc585, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.5802584
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397440856588887471, guid: cfb939a2b05150344a4e286554bcc585, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2711537
+      value: 2.62
       objectReference: {fileID: 0}
     - target: {fileID: 8397440856588887471, guid: cfb939a2b05150344a4e286554bcc585, type: 3}
       propertyPath: m_LocalPosition.z
@@ -515,6 +515,10 @@ PrefabInstance:
     - target: {fileID: 6306122014737013893, guid: 2a01c8f9aec85894a82869d192689a78, type: 3}
       propertyPath: m_Name
       value: Gerador de inimigos
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306122014737013893, guid: 2a01c8f9aec85894a82869d192689a78, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6306122014737013895, guid: 2a01c8f9aec85894a82869d192689a78, type: 3}
       propertyPath: m_RootOrder
