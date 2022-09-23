@@ -48,7 +48,12 @@ MonoBehaviour:
   - {fileID: 7885956151607079395, guid: 4df60fdaaf6d9904d8dac00bb1eb3769, type: 3}
   - {fileID: 1346302146010843371, guid: a76687cae01d1ec429c5282e8e5e3fff, type: 3}
   pontos: 0
-  level: 5
+  level: 1
   levelUp: 100
   qtdInimigo: 0
   tempoEspera: 5
+  fundo:
+  - {fileID: 4794424035614027657, guid: 9f97161c7e4a05e4dbf3747cf4007bf6, type: 3}
+  bossAnimation: {fileID: 2634002392498331420, guid: aece12e8c66edfd46aa7fb7d645a814e, type: 3}
+  Inimigo01script: {fileID: 7885956151607079394, guid: 4df60fdaaf6d9904d8dac00bb1eb3769, type: 3}
+  Inimigo02script: {fileID: 1623804879706857381, guid: a76687cae01d1ec429c5282e8e5e3fff, type: 3}
