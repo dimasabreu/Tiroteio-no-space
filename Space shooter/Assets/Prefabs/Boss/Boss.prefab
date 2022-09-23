@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 725349869}
   m_Layer: 7
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   pontos: 10
   powerUP: {fileID: 0}
   dropPowerUP: 0
-  estado: estado2
+  estado: estado1
   meuRB: {fileID: 0}
   direita: 1
   limite: 6
@@ -219,6 +219,12 @@ MonoBehaviour:
   tiro1: {fileID: 2991548480326138448, guid: aaaff6e4c48b68243a1d873523eb34f1, type: 3}
   tiro2: {fileID: 3279054427636526702, guid: 3baa39bfb2a68c649b043a884e0f1e0c, type: 3}
   delayTiro: 1
+  esperaTiro2: 1.5
+  estados:
+  - estado1
+  - estado2
+  - estado3
+  esperaEstado: 10
 --- !u!95 &398658793
 Animator:
   serializedVersion: 4
