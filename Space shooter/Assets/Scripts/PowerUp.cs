@@ -7,6 +7,7 @@ public class PowerUp : MonoBehaviour
     private Rigidbody2D meuRB;
     private Color minhacor;
     
+    
     // Start is called before the first frame update
     void Start()
     {
