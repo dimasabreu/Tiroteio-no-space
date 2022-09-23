@@ -187,8 +187,10 @@ MonoBehaviour:
   velocidade: 5
   meuTiro: {fileID: 1325945324681076636, guid: ebe2533dd44835848ba9232eb4fcac71, type: 3}
   meuTiro2: {fileID: 3168070418608979989, guid: d72dfe4ed6576e242a53900a9275eb79, type: 3}
+  meuEscudo: {fileID: 5845679038274508859, guid: f2d586e5fd0b4974d92b29d9ac0abe9e, type: 3}
   posicaoTiro: {fileID: 1288231790}
   vida: 3
+  escudo: 3
   velocidadeTiro: 10
   explosao: {fileID: 3462492383453476511, guid: ec806a9a9a619fc489e10c16683e231f, type: 3}
   esperaTiro: 0
