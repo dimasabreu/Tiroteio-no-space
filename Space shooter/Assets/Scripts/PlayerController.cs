@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {   
@@ -29,11 +30,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float yMin;
     [SerializeField] private float yMax;
 
-    [SerializeField] private int levelTiro = 1;
-
+    [SerializeField] public int levelTiro = 1;
+    [SerializeField] private Text vidaTexto;
+    [SerializeField] private Text escudoTexto;
     void Start()
     {
         meuRB = GetComponent<Rigidbody2D>();
+        vidaTexto.text = vida.ToString();
+        escudoTexto.text = escudo.ToString();
     }
 
     // Update is called once per frame
@@ -43,6 +47,7 @@ public class PlayerController : MonoBehaviour
         Atirando();
         SaindoTela();
         Escudo();
+        
     }
 
     private void Atirando()
@@ -145,6 +150,7 @@ public class PlayerController : MonoBehaviour
                 escudoAtual = Instantiate(meuEscudo, transform.position, transform.rotation);
                 Destroy(escudoAtual, 3.2f);
                 escudo--;
+                escudoTexto.text = escudo.ToString();
             }
                 
         }
@@ -161,6 +167,9 @@ public class PlayerController : MonoBehaviour
     public void PerdeVida(int dano)
     {
         vida -= dano;
+
+        //atualizando a vida 
+        vidaTexto.text = vida.ToString();
         // instanciando a explosao de destruição
         if(vida <= 0)
         {
