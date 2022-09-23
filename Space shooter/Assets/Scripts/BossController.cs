@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class BossController : InimigoPai
@@ -16,6 +15,10 @@ public class BossController : InimigoPai
     [SerializeField] private GameObject tiro1;
     [SerializeField] private GameObject tiro2;
     [SerializeField] private float delayTiro = 1f;
+    [SerializeField] private float esperaTiro2 = 1f;
+    [Header("estados")]
+    [SerializeField] private string[] estados;
+    [SerializeField] private float esperaEstado = 10f;
 
     void Start()
     {
@@ -25,6 +28,8 @@ public class BossController : InimigoPai
     // Update is called once per frame
     void Update()
     {
+        TrocaEstado();
+
         switch (estado)
         {
             case "estado1":
@@ -45,12 +50,20 @@ public class BossController : InimigoPai
         if (esperaTiro <= 0f)
         {
             Tiro1();
-            Tiro2();
             esperaTiro = delayTiro;
         }
         else
         {
             esperaTiro -= Time.deltaTime;
+        }
+        if (esperaTiro2 <= 0f)
+        {
+            Tiro2();
+            esperaTiro2 = delayTiro;
+        }
+        else
+        {
+            esperaTiro2 -= Time.deltaTime;
         }
         // isntanciando a velocidade do boss
         if (direita)
@@ -74,6 +87,8 @@ public class BossController : InimigoPai
 
     private void Estado2()
     {
+        // ficando parado
+        meuRB.velocity = Vector2.zero;
         // espera do tiro
         if (esperaTiro <= 0f)
         {
@@ -149,4 +164,19 @@ public class BossController : InimigoPai
             tiro.transform.rotation = Quaternion.Euler(0f, 0f, angulo + 90f);
         }
     }
+
+    private void TrocaEstado()
+    {
+        if (esperaEstado <= 0f)
+        {
+            int IndiceEstado = Random.Range(0, estados.Length);
+            estado = estados[IndiceEstado];
+            esperaEstado = 10f;
+        }
+        else
+        {
+            esperaEstado -= Time.deltaTime;
+        }
+    }
+
 }
