@@ -204,7 +204,7 @@ MonoBehaviour:
   esperaTiro: 0.8
   velocidadeTiro: 5
   meuTiro: {fileID: 0}
-  explosao: {fileID: 0}
+  explosao: {fileID: 1740925406130868152, guid: 2e3c3910496acc44897195b08acd79f9, type: 3}
   yDEAD: -7
   pontos: 10
   powerUP: {fileID: 0}
