@@ -15,6 +15,7 @@ public class InimigoPai : MonoBehaviour
     [SerializeField] protected GameObject explosao;
 
     [SerializeField] protected float yDEAD = -7f;
+    protected float xDEAD = 9.26f;
     [SerializeField] public int pontos = 10;
 
     // criando o drop do power up
@@ -43,17 +44,23 @@ public class InimigoPai : MonoBehaviour
                 Destroy(gameObject);
 
                 Instantiate(explosao, transform.position, transform.rotation);
+                if (powerUP)
+                {
+                    var chancePowerUP = Random.Range(0f, 1f);
+                    if(chancePowerUP > dropPowerUP)
+                    {
+                        
+                        GameObject pU = Instantiate(powerUP, transform.position, transform.rotation);
+                        Destroy(pU, 3f);
+                        
+                        
+                    }
+                }
                 // ganhando pontos
                 var gerador = FindObjectOfType<GeradorInimigos>();
-                gerador.GanhaPontos(pontos);
-                var chancePowerUP = Random.Range(0f, 1f);
-                if(chancePowerUP > dropPowerUP)
+                if (gerador)
                 {
-                    
-                    GameObject pU = Instantiate(powerUP, transform.position, transform.rotation);
-                    Destroy(pU, 3f);
-                    
-                    
+                    gerador.GanhaPontos(pontos);
                 }
 
             }
@@ -73,7 +80,7 @@ public class InimigoPai : MonoBehaviour
     // metodo de se matar
     public void seMata()
     {
-        if(transform.position.y < yDEAD)
+        if(transform.position.y < yDEAD | transform.position.x > xDEAD | transform.position.x < -xDEAD)
             {
                 Destroy(gameObject);
             }
