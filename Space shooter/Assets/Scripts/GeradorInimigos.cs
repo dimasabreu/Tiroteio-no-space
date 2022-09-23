@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GeradorInimigos : MonoBehaviour
 {
@@ -35,16 +34,19 @@ public class GeradorInimigos : MonoBehaviour
     public Inimigo01Controller Inimigo01script;
     public Inimigo02controller Inimigo02script;
 
+    // colocando os pontos na tela
+    [SerializeField] private Text pontuacaoTexto;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        pontuacaoTexto.text = pontos.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
+        pontuacaoTexto.text = pontos.ToString();
         if (level < 10)
         {
             GeraInimigos();
@@ -53,7 +55,7 @@ public class GeradorInimigos : MonoBehaviour
         {
             criaBoss();
         }
-        geraFundo();
+        // geraFundo();
         
     }
 
@@ -63,7 +65,7 @@ public class GeradorInimigos : MonoBehaviour
         if(this.pontos >= levelUp)
         {
             level++;
-            levelUp = (levelUp * level) / 1.5f;
+            levelUp = (levelUp + 100);
         }
     }
 
@@ -139,19 +141,6 @@ public class GeradorInimigos : MonoBehaviour
         }
     }
 
-    private void geraFundo()
-    {
-        if(level == 1)
-        {
-            qtdFundo++;
-            if ( qtdFundo == 1)
-            {
-                Vector3 posicaoFundo = new Vector3(0f, 6f, 0f);
-                Instantiate(fundo[0], posicaoFundo, transform.rotation);
-                
-            }
-        }
-    }
 
     private void criaBoss()
     {
@@ -165,7 +154,7 @@ public class GeradorInimigos : MonoBehaviour
         {
             animBoss = Instantiate(bossAnimation, Vector3.zero, transform.rotation);
             animacaoBoss = true;
-            Destroy(animBoss, 5.31f);
+            
         }
         
     }
