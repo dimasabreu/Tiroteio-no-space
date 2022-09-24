@@ -7,6 +7,13 @@ public class GameManager : MonoBehaviour
 {
     private void Awake() 
     {
+        // garantindo q só tem 1
+        int quantidade = FindObjectsOfType<GameManager>().Length;
+        if (quantidade > 1)
+        {
+            Destroy(gameObject);
+        }
+        // nao destruindo quando trocar de cena
         DontDestroyOnLoad(gameObject);
     }
     // Update is called once per frame
@@ -19,9 +26,16 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    // colocando delay na morte com uma corotina
+    IEnumerator PrimeiraCena()
+    {
+         yield return new WaitForSeconds(2f);
+         SceneManager.LoadScene(0);
+   }
     public void Inicio()
     {
-        SceneManager.LoadScene(0);
+        StartCoroutine(PrimeiraCena());
     }
     public void Sair()
     {
