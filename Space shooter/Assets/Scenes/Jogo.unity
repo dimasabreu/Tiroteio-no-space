@@ -255,7 +255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3052675917392560197, guid: 807580b773d381d46be80790f23a422a, type: 3}
       propertyPath: vida
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3052675917392560197, guid: 807580b773d381d46be80790f23a422a, type: 3}
       propertyPath: vidaTexto
@@ -697,11 +697,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6306122014737013892, guid: 2a01c8f9aec85894a82869d192689a78, type: 3}
       propertyPath: level
-      value: 9
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6306122014737013892, guid: 2a01c8f9aec85894a82869d192689a78, type: 3}
       propertyPath: levelUp
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6306122014737013892, guid: 2a01c8f9aec85894a82869d192689a78, type: 3}
       propertyPath: pontuacaoTexto
@@ -811,18 +811,6 @@ PrefabInstance:
     - target: {fileID: 7532153862039470146, guid: eb84a2275d145fb42962116524e274e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7532153862039470269, guid: eb84a2275d145fb42962116524e274e9, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.01886791
-      objectReference: {fileID: 0}
-    - target: {fileID: 7532153862039470269, guid: eb84a2275d145fb42962116524e274e9, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.011260647
-      objectReference: {fileID: 0}
-    - target: {fileID: 7532153862039470269, guid: eb84a2275d145fb42962116524e274e9, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0.0013349934
       objectReference: {fileID: 0}
     - target: {fileID: 7532153862039470270, guid: eb84a2275d145fb42962116524e274e9, type: 3}
       propertyPath: m_Name
