@@ -1,13 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossController : InimigoPai
 {   
     [Header("Informações Básicas")]
     [SerializeField] private string estado = "estado1";
     
-    [SerializeField] private Rigidbody2D meuRB;
+    private Rigidbody2D meuRB;
     [SerializeField] private bool direita = true;
     [SerializeField] private float limite = 6f;
+    [SerializeField] private int maxVida = 100;
+    [SerializeField] private Image barraDeVida;
     [Header("Informações dos tiros")]
     [SerializeField] private Transform posicaoTiro1;
     [SerializeField] private Transform posicaoTiro1_2;
@@ -20,9 +23,11 @@ public class BossController : InimigoPai
     [SerializeField] private string[] estados;
     [SerializeField] private float esperaEstado = 10f;
 
+
     void Start()
     {
         meuRB = GetComponent<Rigidbody2D>();
+        vida = maxVida;
     }
 
     // Update is called once per frame
@@ -42,6 +47,11 @@ public class BossController : InimigoPai
                 Estado3();
                 break;
         }
+        // convertendo o valor da vida pra float pra fill entre 0 e 1
+        barraDeVida.fillAmount = ((float) vida / (float) maxVida);
+        // convertendo o valor do fill amount para byte entre 0 e 255
+        barraDeVida.color = new Color32(190,(byte) (barraDeVida.fillAmount * 255), 0, 255);
+
     }
 
     private void Estado3()
