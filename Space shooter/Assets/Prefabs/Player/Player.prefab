@@ -199,6 +199,8 @@ MonoBehaviour:
   yMin: -5.5
   yMax: 5.5
   levelTiro: 1
+  vidaTexto: {fileID: 0}
+  escudoTexto: {fileID: 0}
 --- !u!50 &3052675917392560199
 Rigidbody2D:
   serializedVersion: 4
