@@ -305,17 +305,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb84a2275d145fb42962116524e274e9, type: 3}
---- !u!114 &1931400691 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6356195716497930421, guid: 67b473cc91977384bb0e00ca222b141e, type: 3}
-  m_PrefabInstance: {fileID: 6356195715741986118}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecd474850d9abdc4ea58a7c614c406cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!20 &1944411136 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 7532153862039470269, guid: eb84a2275d145fb42962116524e274e9, type: 3}
@@ -331,11 +320,19 @@ PrefabInstance:
     - target: {fileID: 5080662173709160171, guid: fa9a2fe7619c61f408c07ec702e9c3e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1931400691}
+      objectReference: {fileID: 6356195716497930421, guid: 67b473cc91977384bb0e00ca222b141e, type: 3}
+    - target: {fileID: 5080662173709160171, guid: fa9a2fe7619c61f408c07ec702e9c3e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IniciaJogo
+      objectReference: {fileID: 0}
     - target: {fileID: 5080662173840590202, guid: fa9a2fe7619c61f408c07ec702e9c3e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1931400691}
+      objectReference: {fileID: 6356195716497930421, guid: 67b473cc91977384bb0e00ca222b141e, type: 3}
+    - target: {fileID: 5080662173840590202, guid: fa9a2fe7619c61f408c07ec702e9c3e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Sair
+      objectReference: {fileID: 0}
     - target: {fileID: 5080662174930677285, guid: fa9a2fe7619c61f408c07ec702e9c3e9, type: 3}
       propertyPath: m_Name
       value: Canvas
