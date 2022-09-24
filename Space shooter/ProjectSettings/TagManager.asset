@@ -8,6 +8,7 @@ TagManager:
   - Jogador
   - PowerUp
   - Escudo
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Tiro Player
   - Tiro Inimigo
   - PowerUp
-  - 
+  - Boss
   - 
   - 
   - 
@@ -53,4 +54,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1216871335
+    locked: 0
+  - name: UI
+    uniqueID: 1105402911
     locked: 0
