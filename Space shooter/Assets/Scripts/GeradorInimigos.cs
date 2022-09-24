@@ -65,7 +65,7 @@ public class GeradorInimigos : MonoBehaviour
         if(this.pontos >= levelUp)
         {
             level++;
-            levelUp = (levelUp + 100);
+            levelUp += level * 100;
         }
     }
 
