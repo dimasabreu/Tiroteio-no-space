@@ -175,6 +175,14 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
             Instantiate(explosao, transform.position, transform.rotation);
+
+            // carregando a cena inicial
+            // achando o game manager
+            var gameManager = FindObjectOfType<GameManager>();
+            if (gameManager)
+            {
+                gameManager.Inicio();
+            }
         }
     }
 
