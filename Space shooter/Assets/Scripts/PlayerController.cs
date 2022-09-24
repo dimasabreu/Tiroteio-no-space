@@ -178,17 +178,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    
     public void Upando(int xp)
     {
         if (levelTiro < 3)
         {
             levelTiro += xp;
+        }
+        else
+        {
+            escudo += xp;
+            escudoTexto.text = escudo.ToString();
         }    
     }
 
     public void Curando(int cura)
     {
         vida += cura;
+        vidaTexto.text = vida.ToString();
     }
 
     public void ganhaVelo(float velo)
