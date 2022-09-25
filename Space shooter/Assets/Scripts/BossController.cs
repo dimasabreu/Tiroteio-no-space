@@ -34,6 +34,7 @@ public class BossController : InimigoPai
     void Update()
     {
         TrocaEstado();
+        AumentaDificuldade();
 
         switch (estado)
         {
@@ -53,6 +54,31 @@ public class BossController : InimigoPai
         barraDeVida.color = new Color32(190,(byte) (barraDeVida.fillAmount * 255), 0, 255);
 
     }
+
+    private void AumentaDificuldade()
+    {
+        // checando a vida
+        if((float) vida <= (float) maxVida / 1.3f)
+        {
+            delayTiro = 0.8f;
+        }
+        if((float) vida <= (float) maxVida / 1.6f)
+        {
+            delayTiro = 0.6f;
+        }
+        if((float) vida <= (float) maxVida / 2f)
+        {
+            delayTiro = 0.5f;
+        }
+        if((float) vida <= (float) maxVida / 10f)
+        {
+            delayTiro = 0.1f;
+        }
+
+    }
+
+
+
 
     private void Estado3()
     {
