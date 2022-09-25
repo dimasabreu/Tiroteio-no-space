@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public int levelTiro = 1;
     [SerializeField] private Text vidaTexto;
     [SerializeField] private Text escudoTexto;
+
+    [SerializeField] private AudioClip somTiro;
+   
     void Start()
     {
         meuRB = GetComponent<Rigidbody2D>();
@@ -52,6 +55,7 @@ public class PlayerController : MonoBehaviour
 
     private void Atirando()
     {
+
         if(levelTiro == 1)
         {
             if (Input.GetButton("Fire1"))
@@ -60,11 +64,15 @@ public class PlayerController : MonoBehaviour
                 if (esperaTiro <= 0)
                 {
                     CriaTiro(meuTiro, posicaoTiro.position);
+                    // som do tiro
+                    AudioSource.PlayClipAtPoint(somTiro, Vector3.zero);
                 }
             }
             if (Input.GetButtonUp("Fire1"))
             {
                 CriaTiro(meuTiro, posicaoTiro.position);
+                // som do tiro
+                AudioSource.PlayClipAtPoint(somTiro, Vector3.zero);
             }
         }
         if(levelTiro == 2)
@@ -79,6 +87,8 @@ public class PlayerController : MonoBehaviour
                     Vector3 posicaod = new Vector3(transform.position.x + 0.45f, transform.position.y + 0.1f, 0f);
                     CriaTiro(meuTiro2, posicaoe);
                     CriaTiro(meuTiro2, posicaod);
+                    // som do tiro
+                    AudioSource.PlayClipAtPoint(somTiro, Vector3.zero);
                 }
             }
             if (Input.GetButtonUp("Fire1"))
@@ -87,6 +97,8 @@ public class PlayerController : MonoBehaviour
                 Vector3 posicaod = new Vector3(transform.position.x + 0.45f, transform.position.y + 0.1f, 0f);
                 CriaTiro(meuTiro2, posicaoe);
                 CriaTiro(meuTiro2, posicaod);
+                // som do tiro
+                AudioSource.PlayClipAtPoint(somTiro, Vector3.zero);
             }
         }
          if(levelTiro == 3)
@@ -102,6 +114,8 @@ public class PlayerController : MonoBehaviour
                     CriaTiro(meuTiro, posicaoTiro.position);
                     CriaTiro(meuTiro2, posicaoe);
                     CriaTiro(meuTiro2, posicaod);
+                    // som do tiro
+                    AudioSource.PlayClipAtPoint(somTiro, Vector3.zero);
                 }
             }
             if (Input.GetButtonUp("Fire1"))
@@ -111,6 +125,8 @@ public class PlayerController : MonoBehaviour
                 CriaTiro(meuTiro, posicaoTiro.position);
                 CriaTiro(meuTiro2, posicaoe);
                 CriaTiro(meuTiro2, posicaod);
+                // som do tiro
+                AudioSource.PlayClipAtPoint(somTiro, Vector3.zero);
             }
         }
         
@@ -123,6 +139,7 @@ public class PlayerController : MonoBehaviour
         //direção e velo do tiro
         tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, velocidadeTiro);
         esperaTiro = (0.1f);
+        
     }
 
     private void Movendo()
