@@ -106,6 +106,7 @@ MonoBehaviour:
   velocidadeTiro: 5
   meuTiro: {fileID: 2991548480326138448, guid: aaaff6e4c48b68243a1d873523eb34f1, type: 3}
   explosao: {fileID: 3462492383453476511, guid: ec806a9a9a619fc489e10c16683e231f, type: 3}
+  somTiro: {fileID: 8300000, guid: dc66e8dd56e209247ac6b2161bd1a2c4, type: 3}
   yDEAD: -7
   pontos: 20
   powerUP: {fileID: 2616740292979747732, guid: a9f7b901ae24a5642bec70c7fb99e65b, type: 3}
