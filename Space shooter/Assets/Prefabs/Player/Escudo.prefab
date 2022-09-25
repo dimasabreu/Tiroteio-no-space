@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5845679038274508856}
   - component: {fileID: 5845679038274508852}
   - component: {fileID: 5845679038274508855}
+  - component: {fileID: -6368161423659273687}
   m_Layer: 6
   m_Name: Escudo
   m_TagString: Escudo
@@ -144,3 +145,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.09
+--- !u!114 &-6368161423659273687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5845679038274508859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88568311e2acbac469105bd99a199bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  somEscudoUp: {fileID: 8300000, guid: 4fbcfcb1a864db9439da9f608a2d0f67, type: 3}
+  somEscudoDown: {fileID: 8300000, guid: d15114f454487f1419aa82f574f39a6e, type: 3}
