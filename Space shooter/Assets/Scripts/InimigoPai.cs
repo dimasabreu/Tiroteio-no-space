@@ -35,7 +35,7 @@ public class InimigoPai : MonoBehaviour
     public void PerdeVida(int dano)
     {
         // so perde vida se o y for menor do q 5
-        if (transform.position.y < 5f)
+        if (transform.position.y < 5.38f)
         {
             vida -= dano;
 
