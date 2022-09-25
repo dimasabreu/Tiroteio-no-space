@@ -378,19 +378,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 3
-  vida: 200
-  esperaTiro: 0.8
+  vida: 500
+  esperaTiro: 1
   velocidadeTiro: 5
   meuTiro: {fileID: 0}
   explosao: {fileID: 1740925406130868152, guid: 2e3c3910496acc44897195b08acd79f9, type: 3}
   yDEAD: -7
-  pontos: 10
+  pontos: 2000
   powerUP: {fileID: 0}
   dropPowerUP: 0
   estado: estado1
   direita: 1
   limite: 6
-  maxVida: 10
+  maxVida: 500
   barraDeVida: {fileID: 881587874}
   posicaoTiro1: {fileID: 41050962}
   posicaoTiro1_2: {fileID: 341774723}
