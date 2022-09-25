@@ -38,6 +38,7 @@ public class Inimigo02controller : InimigoPai
     {
         // Checar se a sprite esta visivel pegando info do child
         bool visivel = GetComponentInChildren<SpriteRenderer>().isVisible;
+        
         // diminuir a espera
         if (visivel)
         {
@@ -65,6 +66,8 @@ public class Inimigo02controller : InimigoPai
                 
                 // reiniciando o tiro
                 esperaTiro = Random.Range(2f, 4f);
+                //tocando o som do tiro
+                TocaTiro();
             }   
             }
             
