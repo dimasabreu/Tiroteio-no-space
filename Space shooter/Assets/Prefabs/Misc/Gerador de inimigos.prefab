@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 1346302146010843371, guid: a76687cae01d1ec429c5282e8e5e3fff, type: 3}
   pontos: 0
   level: 1
-  levelUp: 1
+  levelUp: 100
   qtdInimigo: 0
   tempoEspera: 5
   fundo:
