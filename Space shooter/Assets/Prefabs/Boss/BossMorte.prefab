@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 1740925406229497522}
   - component: {fileID: 1740925406229497520}
   - component: {fileID: 1740925406229497521}
+  - component: {fileID: 1874140993389672901}
   m_Layer: 7
   m_Name: boss_combate_0
   m_TagString: Untagged
@@ -137,3 +138,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1874140993389672901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740925406229497523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6936a4aa4a8774f94bfee05d1d3792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 0}
