@@ -1,19 +1,9 @@
-# Unity_SpaceShooter
+# Jogo feito em Unity usando scripts de C#.
 
-- [X] criar o arquivo
-- [X] adicionar o player
-    - [X] colocar as sprites 
-    - [X] criar a animacao do player
-    - [ ] criar o sistema de movimentacao 
-- [ ] criar o sistema de tiro
-- [ ] criar o sistema de vida
-- [ ] criar o sistema de upgrades
-- [ ] criar 2 tipos de inimigos
-- [ ] criar a inteligencia artificial do inimigo
-- [ ] criar tiros para os inimigos
-- [ ] criar um escudo para o jogador
-- [ ] criar o sistema de pontuacao
-- [ ] criar um sistema de maior pontuacao
-- [ ] criar um boss
-- [ ] criar a boss fight
-- [ ] criar a inteligencia artificial do boss
+Como  jogar: <a href="https://dimasabreu.itch.io/tirotei-no-space">Download</a><br>
+Video com mais cenas: <a href="https://youtu.be/PL_j4Lt6jlg">GamePlay</a>
+
+
+
+https://user-images.githubusercontent.com/95443404/192158453-65553bb5-eb67-4f31-86d5-aedceef6563b.mp4
+
