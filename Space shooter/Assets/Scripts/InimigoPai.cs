@@ -13,6 +13,7 @@ public class InimigoPai : MonoBehaviour
     [SerializeField] protected float velocidadeTiro = 5f;
     [SerializeField] protected GameObject meuTiro;
     [SerializeField] protected GameObject explosao;
+    [SerializeField] protected AudioClip somTiro;
 
     [SerializeField] protected float yDEAD = -7f;
     protected float xDEAD = 9.26f;
@@ -21,6 +22,7 @@ public class InimigoPai : MonoBehaviour
     // criando o drop do power up
     [SerializeField] protected GameObject powerUP;
     [SerializeField] protected float dropPowerUP;
+
     void Start()
     {
         
@@ -30,6 +32,12 @@ public class InimigoPai : MonoBehaviour
     void Update()
     {
         
+    }
+
+    //metodo de som do tiro
+    protected void TocaTiro()
+    {
+        AudioSource.PlayClipAtPoint(somTiro, Vector3.zero);
     }
     // metodo de perder vida
     public void PerdeVida(int dano)
