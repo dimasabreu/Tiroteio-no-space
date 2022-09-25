@@ -28,6 +28,8 @@ public class BossController : InimigoPai
     {
         meuRB = GetComponent<Rigidbody2D>();
         vida = maxVida;
+        // epgando ocanvas e falando qul é a camera
+        GetComponentInChildren<Canvas>().worldCamera = Camera.main;
     }
 
     // Update is called once per frame
@@ -177,6 +179,7 @@ public class BossController : InimigoPai
         tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -velocidadeTiro);
         tiro = Instantiate(tiro1, posicaoTiro1_2.position, transform.rotation);
         tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -velocidadeTiro);
+        TocaTiro();
     }
 
     private void Tiro2()
@@ -198,6 +201,7 @@ public class BossController : InimigoPai
             float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
             //passando o angulo para o tiro
             tiro.transform.rotation = Quaternion.Euler(0f, 0f, angulo + 90f);
+            TocaTiro();
         }
     }
 
