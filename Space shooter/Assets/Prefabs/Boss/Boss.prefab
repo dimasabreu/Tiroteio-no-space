@@ -219,7 +219,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 7532153862039470269, guid: eb84a2275d145fb42962116524e274e9, type: 3}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -383,6 +383,7 @@ MonoBehaviour:
   velocidadeTiro: 5
   meuTiro: {fileID: 0}
   explosao: {fileID: 1740925406130868152, guid: 2e3c3910496acc44897195b08acd79f9, type: 3}
+  somTiro: {fileID: 8300000, guid: dc66e8dd56e209247ac6b2161bd1a2c4, type: 3}
   yDEAD: -7
   pontos: 2000
   powerUP: {fileID: 0}
