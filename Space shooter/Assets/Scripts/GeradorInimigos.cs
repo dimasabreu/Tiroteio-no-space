@@ -36,6 +36,8 @@ public class GeradorInimigos : MonoBehaviour
 
     // colocando os pontos na tela
     [SerializeField] private Text pontuacaoTexto;
+    [SerializeField] private AudioClip MusicaBoss;
+    [SerializeField] private AudioSource MusicaJogo;
 
     // Start is called before the first frame update
     void Start()
@@ -148,6 +150,10 @@ public class GeradorInimigos : MonoBehaviour
             animBoss = Instantiate(bossAnimation, Vector3.zero, transform.rotation);
             animacaoBoss = true;
             
+            //musica do boss
+            MusicaJogo.clip = MusicaBoss;
+            MusicaJogo.Play();
+
         }
         
     }
