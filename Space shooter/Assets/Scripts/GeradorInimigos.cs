@@ -55,17 +55,16 @@ public class GeradorInimigos : MonoBehaviour
         {
             criaBoss();
         }
-        // geraFundo();
         
     }
 
     public void GanhaPontos(int pontos)
     {
-        this.pontos += pontos;
-        if(this.pontos >= levelUp)
+        this.pontos += pontos * level;
+        if(this.pontos > levelUp)
         {
             level++;
-            levelUp += level * 100;
+            levelUp *= 2;
         }
     }
 
@@ -100,32 +99,26 @@ public class GeradorInimigos : MonoBehaviour
                 {
                     inimigoCriado = inimigos[0];
                     Inimigo01script.vida = 1;
-                    Inimigo01script.pontos = 10;
-                    if (level == 2)
+                    if (level == 4)
                     {
                         Inimigo01script.vida = 2;
-                        Inimigo01script.pontos = 15;
                     }
-                    if (level >= 3)
+                    if (level >= 5)
                     {
                         Inimigo01script.vida = 3;
-                        Inimigo01script.pontos = 20;
                     }
                 }
                 else
                 {
                     inimigoCriado = inimigos[1];
                     Inimigo02script.vida = 1;
-                    Inimigo02script.pontos = 15;
-                    if (level == 3)
+                    if (level == 5)
                     {
                         Inimigo02script.vida = 2;
-                        Inimigo02script.pontos = 20;
                     }
-                    if (level >= 4)
+                    if (level >= 6)
                     {
                         Inimigo02script.vida = 3;
-                        Inimigo02script.pontos = 25;
                     }
                 }
 
