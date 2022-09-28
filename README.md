@@ -1,6 +1,6 @@
 # Jogo feito em Unity usando scripts de C#.
 
-Como  jogar: <a href="https://dimasabreu.itch.io/tirotei-no-space">Download</a><br>
+Como  jogar: <a href="https://dimasabreu.itch.io/tiroteio-no-space">Download</a><br>
 Video com mais cenas: <a href="https://youtu.be/PL_j4Lt6jlg">GamePlay</a>
 
 
