@@ -1,7 +1,7 @@
-# Jogo feito em Unity usando scripts de C#.
+# A space shooter game made in unity
 
-Como  jogar: <a href="https://dimasabreu.itch.io/tiroteio-no-space">Download</a><br>
-Video com mais cenas: <a href="https://youtu.be/PL_j4Lt6jlg">GamePlay</a>
+How to play: <a href="https://dimasabreu.itch.io/tiroteio-no-space">Play/a><br>
+Gameplay: <a href="https://youtu.be/PL_j4Lt6jlg">Click-Here</a>
 
 
 
