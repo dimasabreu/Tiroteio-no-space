@@ -1,6 +1,6 @@
 # A space shooter game made in unity
 
-How to play: <a href="https://dimasabreu.itch.io/tiroteio-no-space">Play/a><br>
+How to play: <a href="https://dimasabreu.itch.io/tiroteio-no-space">Play</a><br>
 Gameplay: <a href="https://youtu.be/PL_j4Lt6jlg">Click-Here</a>
 
 
